@@ -1,0 +1,185 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="docGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="paperShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="600" fill="url(#docGradient)"/>
+  
+  <!-- Floating geometric shapes -->
+  <g opacity="0.1">
+    <polygon points="100,50 150,100 100,150 50,100" fill="#38bdf8" transform="rotate(45 100 100)"/>
+    <polygon points="1050,150 1100,200 1050,250 1000,200" fill="#f59e0b" transform="rotate(30 1050 200)"/>
+    <circle cx="200" cy="500" r="30" fill="#ef4444"/>
+    <polygon points="1000,450 1050,500 1000,550 950,500" fill="#10b981" transform="rotate(15 1000 500)"/>
+  </g>
+  
+  <!-- Main Document Container -->
+  <g transform="translate(200,80)">
+    
+    <!-- Document Papers Stack -->
+    <!-- Paper 3 (background) -->
+    <rect x="15" y="15" width="350" height="440" rx="8" fill="#f1f5f9" opacity="0.3" transform="rotate(2)" filter="url(#paperShadow)"/>
+    <!-- Paper 2 (middle) -->
+    <rect x="8" y="8" width="350" height="440" rx="8" fill="#f8fafc" opacity="0.6" transform="rotate(-1)" filter="url(#paperShadow)"/>
+    <!-- Paper 1 (front) -->
+    <rect x="0" y="0" width="350" height="440" rx="8" fill="#ffffff" filter="url(#paperShadow)"/>
+    
+    <!-- Document Header -->
+    <rect x="20" y="20" width="310" height="60" rx="4" fill="#1e293b"/>
+    <text x="175" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      APPROVAL REQUEST
+    </text>
+    <text x="175" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">
+      #INV-2024-001
+    </text>
+    
+    <!-- Document Lines -->
+    <g stroke="#e2e8f0" stroke-width="1">
+      <line x1="30" y1="110" x2="320" y2="110"/>
+      <line x1="30" y1="130" x2="280" y2="130"/>
+      <line x1="30" y1="150" x2="310" y2="150"/>
+      <line x1="30" y1="170" x2="260" y2="170"/>
+    </g>
+    
+    <!-- Approval Steps on Document -->
+    <g transform="translate(30,200)">
+      <!-- Step 1 - Approved -->
+      <rect x="0" y="0" width="290" height="50" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+      <circle cx="25" cy="25" r="15" fill="#16a34a"/>
+      <path d="M 19 25 L 23 29 L 31 19" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="50" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#166534">
+        Manager Approval
+      </text>
+      <text x="50" y="36" font-family="Arial, sans-serif" font-size="11" fill="#15803d">
+        ✓ Approved by John Doe - 2 hours ago
+      </text>
+      
+      <!-- Step 2 - In Progress -->
+      <rect x="0" y="60" width="290" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="25" cy="85" r="15" fill="#f59e0b"/>
+      <circle cx="25" cy="85" r="6" fill="white"/>
+      <text x="50" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#92400e">
+        Finance Approval
+      </text>
+      <text x="50" y="96" font-family="Arial, sans-serif" font-size="11" fill="#b45309">
+        ⏳ Waiting for approval...
+      </text>
+      
+      <!-- Step 3 - Pending -->
+      <rect x="0" y="120" width="290" height="50" rx="6" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+      <circle cx="25" cy="145" r="15" fill="#64748b"/>
+      <text x="50" y="142" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#475569">
+        GM Final Approval
+      </text>
+      <text x="50" y="156" font-family="Arial, sans-serif" font-size="11" fill="#64748b">
+        ⏸️ Pending previous step
+      </text>
+    </g>
+    
+    <!-- Signature Line -->
+    <line x1="30" y1="400" x2="200" y2="400" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="30" y="415" font-family="Arial, sans-serif" font-size="10" fill="#64748b">
+      Digital Signature
+    </text>
+    
+  </g>
+  
+  <!-- Large Title Section -->
+  <g transform="translate(600,150)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="72" font-weight="800" fill="#ffffff" filter="url(#glow)">
+      AApproval
+    </text>
+    
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="300" fill="#94a3b8">
+      Laravel Approval Workflow
+    </text>
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="300" fill="#94a3b8">
+      Management System
+    </text>
+    
+    <!-- Code Snippet Box -->
+    <rect x="0" y="120" width="480" height="180" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <rect x="0" y="120" width="480" height="35" rx="8" fill="#1e293b"/>
+    
+    <!-- Terminal header -->
+    <circle cx="20" cy="137" r="6" fill="#ef4444"/>
+    <circle cx="40" cy="137" r="6" fill="#f59e0b"/>
+    <circle cx="60" cy="137" r="6" fill="#10b981"/>
+    
+    <text x="100" y="142" font-family="monospace" font-size="12" fill="#94a3b8">
+      composer require aurorawebsoftware/aapproval
+    </text>
+    
+    <!-- Code content -->
+    <text x="20" y="180" font-family="monospace" font-size="14" fill="#38bdf8">
+      class Invoice extends Model
+    </text>
+    <text x="20" y="200" font-family="monospace" font-size="14" fill="#ffffff">
+      {
+    </text>
+    <text x="40" y="220" font-family="monospace" font-size="14" fill="#f59e0b">
+      use
+    </text>
+    <text x="70" y="220" font-family="monospace" font-size="14" fill="#10b981">
+      HasApprovals;
+    </text>
+    <text x="20" y="240" font-family="monospace" font-size="14" fill="#ffffff">
+      }
+    </text>
+    
+    <text x="20" y="275" font-family="monospace" font-size="12" fill="#64748b">
+      // Multi-step approval workflow ready! 🚀
+    </text>
+  </g>
+  
+  <!-- Feature Pills -->
+  <g transform="translate(600,380)">
+    <rect x="0" y="0" width="100" height="28" rx="14" fill="#16a34a"/>
+    <text x="50" y="19" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="white">
+      Multi-Step
+    </text>
+    
+    <rect x="110" y="0" width="85" height="28" rx="14" fill="#dc2626"/>
+    <text x="152" y="19" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="white">
+      Laravel
+    </text>
+    
+    <rect x="205" y="0" width="95" height="28" rx="14" fill="#7c3aed"/>
+    <text x="252" y="19" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="white">
+      Role Based
+    </text>
+    
+    <rect x="310" y="0" width="120" height="28" rx="14" fill="#0891b2"/>
+    <text x="370" y="19" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="white">
+      Backend Only
+    </text>
+  </g>
+  
+  <!-- Version Badge -->
+  <g transform="translate(1050,520)">
+    <rect x="0" y="0" width="120" height="50" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
+    <text x="60" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">
+      v1.0.0
+    </text>
+    <text x="60" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">
+      MIT LICENSE
+    </text>
+  </g>
+  
+</svg>
