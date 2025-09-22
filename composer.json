@@ -1,0 +1,26 @@
+{
+    "name": "aurorawebsoftware/aapproval",
+    "description": "Backend-only approval workflow for create/update/delete actions",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aurorawebsoftware\\AApproval\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "illuminate/support": "^11.0",
+        "illuminate/database": "^11.0",
+        "illuminate/auth": "^11.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aurorawebsoftware\\AApproval\\AApprovalServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
