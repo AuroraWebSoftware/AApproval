@@ -1,6 +1,7 @@
 # AApproval - Laravel Approval Workflow Package
 ![AApproval Package](assets/cover.png)
 ![AApproval Package](assets/cover2.svg)
+![AApproval Package](assets/cover3.svg)
 
 AApproval provides a powerful and flexible approval workflow system for create/update/delete operations in Laravel applications. This package is backend-only and does not include any frontend components.
 
