@@ -27,7 +27,7 @@ trait HasApprovals
     {
         $user = Auth::user();
 
-        if ($user->can('create_payment::link', $model)) {
+        if ($user->can(config('approvals.permission_name', 'approval_direct'), $model)) {
             return true;
         }
 
